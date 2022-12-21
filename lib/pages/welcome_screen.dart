@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travle_app/widgets/app_large_text.dart';
+import 'package:travle_app/widgets/app_text.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -27,6 +29,22 @@ class _WelcomePageState extends State<WelcomePage> {
                 image: DecorationImage(image: AssetImage(
                   "img/"+ images[index]
                 ))
+              ),
+              child: Container(
+                margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppLargeText(text: "Trips"),
+                        AppText(text: "Mountains", size: 30,),
+                        const SizedBox(height: 10,),
+                        AppText(text: "Mountain hikes give you \n an incredible sense of freedom \n along with endurance tests.")
+                      ],
+                    )
+                  ],
+                ),
               ),
             );
           }),
