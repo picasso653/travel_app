@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:travle_app/misc/colors.dart';
 import 'package:travle_app/widgets/app_large_text.dart';
 import 'package:travle_app/widgets/app_text.dart';
+import 'package:travle_app/widgets/responsive_button.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -40,7 +42,11 @@ class _WelcomePageState extends State<WelcomePage> {
                         AppLargeText(text: "Trips"),
                         AppText(text: "Mountains", size: 30,),
                         const SizedBox(height: 10,),
-                        AppText(text: "Mountain hikes give you \n an incredible sense of freedom \n along with endurance tests.")
+                        AppText(text: "Mountain hikes give you \n an incredible sense of freedom \n along with endurance tests.", 
+                        color: AppColors.textColor2,
+                        ),
+                        const SizedBox(height: 40,),
+                        ResponsiveButton(),
                       ],
                     )
                   ],
