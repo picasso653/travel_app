@@ -15,6 +15,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  var images = {
+    'balloning.png': "Ballining",
+    "hiking.png": 'Hiking',
+    "kayaking.png": "Kayaking",
+    "snorkling.png": "Snorkling"
+  };
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
@@ -46,13 +52,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               )),
           const SizedBox(
-            height: 40,
+            height: 30,
           ),
           Container(
             margin: const EdgeInsets.only(left: 20),
             child: AppLargeText(text: 'Discover'),
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
           // ignore: avoid_unnecessary_containers
           Container(
               child: Align(
@@ -104,17 +110,51 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               const Text("data")
             ]),
           ),
-          const SizedBox(height: 30,),
+          const SizedBox(height: 10,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              AppLargeText(text: "Explore more", size: 22,),
-              AppText(text: "See all", color: AppColors.textColor1,)
-            ],
+              children: [
+                AppLargeText(
+                  text: "Explore more",
+                  size: 22,
+                ),
+                AppText(
+                  text: "See all",
+                  color: AppColors.textColor1,
+                )
+              ],
+            ),
           ),
-          ),
+          const SizedBox(height: 10),
+          Container(
+            height: 100,
+            width: double.maxFinite,
+            margin: const EdgeInsets.only(left: 20),
+            child: ListView.builder(
+                itemCount: 4,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Container(
+                margin: const EdgeInsets.only(right: 50),
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  image: DecorationImage(image: AssetImage("img/${images.keys.elementAt(index)}"),
+                  fit: BoxFit.cover
+                  )
+                ),
+              ),
+              
+                    ],
+                  );
+                }),
+          )
         ],
       ),
     );
