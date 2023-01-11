@@ -153,8 +153,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   )
                 ),
               ),
+              // ignore: avoid_unnecessary_containers
               Container(
-                child: AppText(text: "Kayaking",
+                child: AppText(text: images.values.elementAt(index),
                 color: AppColors.textColor2
                 ),
               )

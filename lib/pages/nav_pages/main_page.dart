@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:travle_app/pages/nav_pages/bar_item_page.dart';
-import 'package:travle_app/pages/nav_pages/home_page.dart';
+import 'package:travle_app/pages/home_page.dart';
 import 'package:travle_app/pages/nav_pages/my_page.dart';
 import 'package:travle_app/pages/nav_pages/search_page.dart';
 
