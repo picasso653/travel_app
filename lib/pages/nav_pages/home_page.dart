@@ -110,7 +110,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               const Text("data")
             ]),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -136,10 +138,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 itemCount: 4,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return Column(
+                  return Container(
+                    margin: const EdgeInsets.only(right: 20),
+                    child: Column(
                     children: [
                       Container(
-                margin: const EdgeInsets.only(right: 50),
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
@@ -150,8 +153,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   )
                 ),
               ),
+              Container(
+                child: AppText(text: "Kayaking",
+                color: AppColors.textColor2
+                ),
+              )
               
                     ],
+                  ),
                   );
                 }),
           )
