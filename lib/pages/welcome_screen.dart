@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:get/instance_manager.dart';
 import 'package:travle_app/misc/colors.dart';
-import 'package:travle_app/pages/nav_pages/main_page.dart';
 import 'package:travle_app/widgets/app_large_text.dart';
 import 'package:travle_app/widgets/app_text.dart';
 import 'package:travle_app/widgets/responsive_button.dart';
@@ -32,6 +29,7 @@ class _WelcomePageState extends State<WelcomePage> {
               height: double.maxFinite,
               decoration: BoxDecoration(
                   image: DecorationImage(
+                      // ignore: prefer_interpolation_to_compose_strings
                       image: AssetImage("img/" + images[index]))),
               child: Container(
                 margin: const EdgeInsets.only(top: 150, left: 20, right: 20),

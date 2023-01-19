@@ -1,8 +1,6 @@
-// ignore_for_file: implementation_imports
+// ignore_for_file: implementation_imports, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:travle_app/misc/colors.dart';
 import 'package:travle_app/widgets/app_large_text.dart';
 import 'package:travle_app/widgets/app_text.dart';
@@ -23,7 +21,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   };
   @override
   Widget build(BuildContext context) {
-    TabController _tabController = TabController(length: 3, vsync: this);
+    TabController tabController = TabController(length: 3, vsync: this);
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +64,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: TabBar(
                 isScrollable: true,
                 labelPadding: const EdgeInsets.only(left: 20, right: 20),
-                controller: _tabController,
+                controller: tabController,
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.grey,
                 indicator:
@@ -88,7 +86,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             padding: const EdgeInsets.only(left: 20),
             height: 300,
             width: double.maxFinite,
-            child: TabBarView(controller: _tabController, children: [
+            child: TabBarView(controller: tabController, children: [
               ListView.builder(
                 itemCount: 3,
                 scrollDirection: Axis.horizontal,
@@ -171,6 +169,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 }
 
+// ignore: must_be_immutable
 class CircleTabIndicator extends Decoration {
   final Color color;
   double radius;
@@ -178,6 +177,7 @@ class CircleTabIndicator extends Decoration {
 
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
+    // ignore: todo
     // TODO: implement createBoxPainter
     return _CirclePainter(color: color, radius: radius);
   }
@@ -189,13 +189,14 @@ class _CirclePainter extends BoxPainter {
   _CirclePainter({required this.color, required this.radius});
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
+    // ignore: todo
     // TODO: implement paint
-    Paint _paint = Paint();
-    _paint.color = color;
-    _paint.isAntiAlias = true;
+    Paint paint = Paint();
+    paint.color = color;
+    paint.isAntiAlias = true;
     final Offset CircleOffset = Offset(
         configuration.size!.width / 2 - radius / 2,
         configuration.size!.height - radius);
-    canvas.drawCircle(offset + CircleOffset, radius, _paint);
+    canvas.drawCircle(offset + CircleOffset, radius, paint);
   }
 }
