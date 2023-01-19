@@ -100,28 +100,52 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           Wrap(
                             children: List.generate(5, (index) {
-                              return  Icon(
+                              return Icon(
                                 Icons.star,
-                                color: index< gottenStars?AppColors.starColor:AppColors.textColor1,
+                                color: index < gottenStars
+                                    ? AppColors.starColor
+                                    : AppColors.textColor1,
                               );
                             }),
                           ),
-                          const SizedBox(width: 5,),
+                          const SizedBox(
+                            width: 5,
+                          ),
                           AppText(text: '(4.0)')
                         ],
                       ),
-                      const SizedBox(height: 25,),
-                          AppLargeText(text: 'People', color: Colors.black.withOpacity(0.8), size: 20,),
-                          const SizedBox(height: 5,),
-                          AppText(text: 'People in your group', color: AppColors.mainTextColor,),
-                          Wrap(
-                            children: List.generate(5, (index) {
-                              return AppNumberButton(color: Colors.black,
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      AppLargeText(
+                        text: 'People',
+                        color: Colors.black.withOpacity(0.8),
+                        size: 20,
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      AppText(
+                        text: 'People in your group',
+                        color: AppColors.mainTextColor,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Wrap(
+                        children: List.generate(5, (index) {
+                          return Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: AppNumberButton(
+                              color: Colors.black,
                               backgroudColor: AppColors.buttonBackground,
                               borderColor: AppColors.buttonBackground,
-                              size: 50);
-                            }),
-                          )
+                              size: 50,
+                              text: (index + 1).toString(),
+                            ),
+                          );
+                        }),
+                      )
                     ],
                   ),
                 ))
