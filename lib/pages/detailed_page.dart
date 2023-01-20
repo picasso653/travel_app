@@ -12,6 +12,7 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
+  int selectedIndex=-1;
   int gottenStars = 4;
   @override
   Widget build(BuildContext context) {
@@ -117,31 +118,44 @@ class _DetailPageState extends State<DetailPage> {
                       const SizedBox(
                         height: 25,
                       ),
-                      AppLargeText(
+                      Row(
+                        children: [
+                          AppLargeText(
                         text: 'People',
                         color: Colors.black.withOpacity(0.8),
                         size: 20,
                       ),
+                        ],
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
-                      AppText(
+                     Row(children: [
+                        AppText(
                         text: 'People in your group',
                         color: AppColors.mainTextColor,
                       ),
+                     ],),
                       const SizedBox(
                         height: 10,
                       ),
                       Wrap(
                         children: List.generate(5, (index) {
-                          return Container(
-                            margin: const EdgeInsets.only(right: 10),
-                            child: AppNumberButton(
-                              color: Colors.black,
-                              backgroudColor: AppColors.buttonBackground,
-                              borderColor: AppColors.buttonBackground,
-                              size: 50,
-                              text: (index + 1).toString(),
+                          return InkWell(
+                            onTap: () {
+                              setState(() {
+                                selectedIndex = index;
+                              });
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.only(right: 10),
+                              child: AppNumberButton(
+                                color: selectedIndex==index?Colors.white:Colors.black,
+                                backgroudColor: selectedIndex==index?Colors.black:AppColors.buttonBackground,
+                                borderColor: selectedIndex==index?Colors.black:AppColors.buttonBackground,
+                                size: 50,
+                                text: (index + 1).toString(),
+                              ),
                             ),
                           );
                         }),

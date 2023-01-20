@@ -18,7 +18,7 @@ class AppNumberButton extends StatelessWidget {
       required this.backgroudColor,
       required this.borderColor,
       required this.size,
-      this.isIcon
+      this.isIcon=false
       });
 
   @override
@@ -30,7 +30,7 @@ class AppNumberButton extends StatelessWidget {
           border: Border.all(width: 1, color: borderColor),
           borderRadius: BorderRadius.circular(15),
           color: backgroudColor),
-          child: isIcon==false?Center(child: AppText(text: text!, color: Colors.black,),):Center(child: Icon(icon, color: color,),),
+          child: isIcon==false?Center(child: AppText(text: text!, color: color,),):Center(child: Icon(icon, color: color,),),
     );
   }
 }
