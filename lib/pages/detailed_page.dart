@@ -61,7 +61,7 @@ class _DetailPageState extends State<DetailPage> {
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -159,9 +159,20 @@ class _DetailPageState extends State<DetailPage> {
                             ),
                           );
                         }),
-                      )
+                      ),
+                      const SizedBox(height: 10,),
+                      AppLargeText(text: 'Description', color: Colors.black.withOpacity(0.8), size: 20,),
+                      AppText(text: 'You must travel. Travelling helps gets rid of pressure. Go to the mountains to see the nature.', color: AppColors.mainTextColor,)
                     ],
                   ),
+                )),
+                Positioned(
+                  bottom: 10,
+                  left: 20,
+                  child: Row(
+                  children: [
+                    AppNumberButton(color:  AppColors.textColor2, backgroudColor: Colors.white, borderColor: AppColors.textColor1, size: 30),
+                  ],
                 ))
           ],
         ),
