@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travle_app/pages/detailed_page.dart';
+import 'package:travle_app/pages/detail_page.dart';
 
 void main() {
   runApp(const MyApp());
