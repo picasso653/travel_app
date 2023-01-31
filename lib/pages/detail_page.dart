@@ -104,9 +104,11 @@ class _DetailPageState extends State<DetailPage> {
                         children: [
                           Wrap(
                             children: List.generate(5, (index) {
-                              return const Icon(
+                              return Icon(
                                 Icons.star,
-                                color: AppColors.starColor,
+                                color: index < gottenStars
+                                    ? AppColors.starColor
+                                    : AppColors.textColor2,
                               );
                             }),
                           ),
@@ -115,6 +117,33 @@ class _DetailPageState extends State<DetailPage> {
                             color: AppColors.textColor2,
                           )
                         ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      AppLargeText(
+                        text: "People",
+                        size: 20,
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      AppText(
+                        text: "Number of people in your group",
+                        color: AppColors.mainTextColor,
+                      ),
+                      Wrap(
+                        children: List.generate(5, (index) {
+                          return Container(
+                            margin: const EdgeInsets.only(right: 5),
+                            height: 60,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.red[200]
+                            ),
+                          );
+                        }),
                       )
                     ],
                   ),
