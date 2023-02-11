@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   var images = {
-    'balloning.png': "Balling",
+    'balloning.png': "Ballining",
     "hiking.png": 'Hiking',
     "kayaking.png": "Kayaking",
     "snorkling.png": "Snorkling"
@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
           Container(
             margin: const EdgeInsets.only(left: 20),
-            child: AppLargeText(text: 'Reveal'),
+            child: AppLargeText(text: 'Discover'),
           ),
           const SizedBox(height: 20),
           // ignore: avoid_unnecessary_containers
