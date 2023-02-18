@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:travle_app/misc/colors.dart';
 import 'package:travle_app/widgets/app_large_text.dart';
+import 'package:travle_app/widgets/app_number_buttons.dart';
 import 'package:travle_app/widgets/app_text.dart';
 
 class DetailPage extends StatefulWidget {
@@ -133,19 +134,10 @@ class _DetailPageState extends State<DetailPage> {
                         color: AppColors.mainTextColor,
                       ),
                       const SizedBox(height: 10,),
-                      Wrap(
-                        children: List.generate(5, (index) {
-                          return Container(
-                            margin: const EdgeInsets.only(right: 5),
-                            height: 60,
-                            width: 60,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.red[200]
-                            ),
-                          );
-                        }),
-                      )
+                     AppNumberButton(color: Colors.black,
+                      backgroudColor: AppColors.buttonBackground,
+                       borderColor: AppColors.buttonBackground,
+                        size: 50)
                     ],
                   ),
                 ))
