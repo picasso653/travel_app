@@ -134,10 +134,14 @@ class _DetailPageState extends State<DetailPage> {
                         color: AppColors.mainTextColor,
                       ),
                       const SizedBox(height: 10,),
-                     AppNumberButton(color: Colors.black,
+                     AppNumberButton(
+                       size: 50,
+                       color: Colors.black,
                       backgroudColor: AppColors.buttonBackground,
                        borderColor: AppColors.buttonBackground,
-                        size: 50)
+                        
+                        isIcon: false,
+                        )
                     ],
                   ),
                 ))

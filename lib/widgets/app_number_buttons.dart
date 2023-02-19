@@ -5,19 +5,19 @@ import 'package:travle_app/widgets/app_text.dart';
 class AppNumberButton extends StatelessWidget {
   IconData? icon;
   String? text;
+  double size;
   final Color color;
   final Color backgroudColor;
   final Color borderColor;
-  double size;
   bool? isIcon;
   AppNumberButton(
       {super.key,
       this.icon,
-      this.text,
+      this.text='Hi',
+      required this.size,
       required this.color,
       required this.backgroudColor,
       required this.borderColor,
-      required this.size,
       this.isIcon=false
       });
 
