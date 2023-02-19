@@ -133,15 +133,23 @@ class _DetailPageState extends State<DetailPage> {
                         text: "Number of people in your group",
                         color: AppColors.mainTextColor,
                       ),
-                      const SizedBox(height: 10,),
-                     AppNumberButton(
-                       size: 50,
-                       color: Colors.black,
-                      backgroudColor: AppColors.buttonBackground,
-                       borderColor: AppColors.buttonBackground,
-                        
-                        isIcon: false,
-                        )
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Wrap(
+                        children: List.generate(5, (index) {
+                          return Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            child: AppNumberButton(
+                              size: 50,
+                              color: Colors.black,
+                              backgroudColor: AppColors.buttonBackground,
+                              borderColor: AppColors.buttonBackground,
+                              text: (index + 1).toString(),
+                            ),
+                          );
+                        }),
+                      )
                     ],
                   ),
                 ))
