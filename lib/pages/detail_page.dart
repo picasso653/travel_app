@@ -6,6 +6,8 @@ import 'package:travle_app/widgets/app_large_text.dart';
 import 'package:travle_app/widgets/app_number_buttons.dart';
 import 'package:travle_app/widgets/app_text.dart';
 
+import '../widgets/responsive_button.dart';
+
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
 
@@ -177,7 +179,9 @@ class _DetailPageState extends State<DetailPage> {
                        borderColor: AppColors.textColor2,
                        isIcon: true,
                        icon: Icons.favorite_border),
-                       
+                       ResponsiveButton(
+                         isResponsive: true
+                       )
                   ],
                 ))
           ],

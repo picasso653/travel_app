@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:travle_app/misc/colors.dart';
 
+// ignore: must_be_immutable
 class ResponsiveButton extends StatelessWidget {
-  bool isResponsive;
-  double width;
+  bool? isResponsive;
+  double? width;
   ResponsiveButton({super.key, this.isResponsive = false, this.width=100 });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Flexible(child: Container(
       width: width,
       height: 60,
       decoration: BoxDecoration(
@@ -21,6 +22,7 @@ class ResponsiveButton extends StatelessWidget {
           Image.asset('img/button-one.png')
         ],
       ),
+    )
     );
   }
 }
