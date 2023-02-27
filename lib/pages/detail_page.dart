@@ -163,13 +163,14 @@ class _DetailPageState extends State<DetailPage> {
                       const SizedBox(height: 15,),
                       AppLargeText(text: 'Description', color: Colors.black.withOpacity(0.8), size: 21,),
                       const SizedBox(height: 10,),
-                      AppText(text: 'Travelling helps get rid of pressure. Go to the mountains to see nature.', color: AppColors.mainTextColor,)
+                      AppText(text: 'You must go for a travel.Travelling helps get rid of pressure. Go to the mountains to see nature.', color: AppColors.mainTextColor,)
                     ],
                   ),
                 )),
                 Positioned(
                   bottom: 20,
-                  left: 20,
+                  left: 10,
+                  right: 10,
                   child: 
                 Row(
                   children: [

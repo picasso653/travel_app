@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travle_app/misc/colors.dart';
+import 'package:travle_app/widgets/app_text.dart';
 
 // ignore: must_be_immutable
 class ResponsiveButton extends StatelessWidget {
@@ -17,8 +18,9 @@ class ResponsiveButton extends StatelessWidget {
         color: AppColors.mainColor
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: isResponsive==true?MainAxisAlignment.spaceBetween:MainAxisAlignment.center,
         children: [
+          isResponsive==true?AppText(text: "Book Trip Now", color: Colors.white,): Container(),
           Image.asset('img/button-one.png')
         ],
       ),
