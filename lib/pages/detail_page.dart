@@ -180,6 +180,7 @@ class _DetailPageState extends State<DetailPage> {
                        borderColor: AppColors.textColor2,
                        isIcon: true,
                        icon: Icons.favorite_border),
+                       const SizedBox(width: 40,),
                        ResponsiveButton(
                          isResponsive: true
                        )

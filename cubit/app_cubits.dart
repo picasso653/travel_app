@@ -1,6 +1,9 @@
 import 'package:bloc/bloc.dart';
 
-class AppCubit extends Cubit{
-  AppCubit(super.initialState);
-  
+import 'app_cubit_states.dart';
+
+class AppCubits extends Cubit<CubitState> {
+  AppCubits() : super(InitialState()) {
+    emit(WelcomeState());
+  }
 }
