@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:travle_app/cubit/app_cubit_logic.dart';
 import 'pages/detail_page.dart' show DetailPage;
 import 'cubit/app_cubits.dart';
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: BlocProvider<AppCubits>(
           create: (context)=>AppCubits(),
+          child: const AppCubitLogics(),
           )
         );
   }
