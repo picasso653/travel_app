@@ -20,7 +20,7 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
         if (state is WelcomeState) {
           return const WelcomePage();
         } else {
-          return Scaffold();
+          return Container();
         }
       }),
     );
