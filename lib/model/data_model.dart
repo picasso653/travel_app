@@ -1,3 +1,3 @@
-class DataModel{
-  
+class DataModel {
+  int cas = 35;
 }
