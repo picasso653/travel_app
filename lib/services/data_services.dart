@@ -16,6 +16,7 @@ class DataServices {
         return <DataModel>[];
       }
     } catch (e) {
+      // ignore: avoid_print
       print(e);
       return <DataModel>[];
     }

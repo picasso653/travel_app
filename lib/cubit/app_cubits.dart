@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, empty_catches
+
 import 'package:bloc/bloc.dart';
 import 'package:travle_app/model/data_model.dart';
 import 'package:travle_app/services/data_services.dart';

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travle_app/cubit/app_cubit_states.dart';
 import 'package:travle_app/cubit/app_cubits.dart';
 import 'package:travle_app/pages/detail_page.dart';
-import 'package:travle_app/pages/home_page.dart';
 import 'package:travle_app/pages/nav_pages/main_page.dart';
 import 'package:travle_app/pages/welcome_page.dart';
 

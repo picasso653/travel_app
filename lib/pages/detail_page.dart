@@ -1,6 +1,6 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travle_app/cubit/app_cubit_states.dart';
 import 'package:travle_app/cubit/app_cubits.dart';
@@ -39,7 +39,7 @@ class _DetailPageState extends State<DetailPage> {
                     height: 330,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage("http://mark.bslmeiyu.com/uploads/"+detail.places.img),
+                            image: NetworkImage("http://mark.bslmeiyu.com/uploads/${detail.places.img}"),
                             fit: BoxFit.cover)),
                   )),
               Positioned(
@@ -89,7 +89,7 @@ class _DetailPageState extends State<DetailPage> {
                               color: Colors.black.withOpacity(0.8),
                             ),
                             AppLargeText(
-                              text: "\$ " + detail.places.price.toString(),
+                              text: "\$ ${detail.places.price}",
                               color: AppColors.mainColor,
                             )
                           ],

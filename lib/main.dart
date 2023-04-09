@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:travle_app/cubit/app_cubit_logic.dart';
 import 'package:travle_app/services/data_services.dart';
-import 'pages/detail_page.dart' show DetailPage;
 import 'cubit/app_cubits.dart';
 void main() {
   runApp(const MyApp());
